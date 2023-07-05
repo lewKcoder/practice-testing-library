@@ -1,11 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 import { UserForm } from './userForm';
 
 function App() {
+  const [users, setUsers] = useState([]);
+
+  const onUserAdd = (user) => {
+    setUsers([...users, user]);
+  };
+
   return (
     <div className="App">
-      <UserForm />
+      <UserForm onUserAdd={onUserAdd} />
     </div>
   );
 }
