@@ -15,12 +15,12 @@ export const UserForm = (props) => {
   return (
     <form action="" onSubmit={handleSubmi}>
       <div>
-        <label htmlFor="">Name</label>
-        <input type="text" onChange={(e) => setName(e.target.value)} />
+        <label htmlFor="name">Name</label>
+        <input id="name" type="text" onChange={(e) => setName(e.target.value)} />
       </div>
       <div>
-        <label htmlFor="">Email</label>
-        <input type="text" onChange={(e) => setEmail(e.target.value)} />
+        <label htmlFor="email">Email</label>
+        <input id="email" type="text" onChange={(e) => setEmail(e.target.value)} />
       </div>
       <button>Add User</button>
     </form>
